@@ -44,11 +44,10 @@ void main() async {
   // initialize notification
   NotiService().initNotification();
   await NotiService().requestNotificationPermission();
-  //
+
   final appDocDir = await getApplicationDocumentsDirectory();
   Hive.init(appDocDir.path);
 
-  // Register Hive adapters
   Hive.registerAdapter(UserModelAdapter());
   Hive.registerAdapter(MoneySourceAdapter());
   Hive.registerAdapter(CurrencyTypeAdapter());
