@@ -61,7 +61,6 @@ void main() async {
   await Hive.openBox('settings');
   await Hive.openBox('jwt');
 
-  // Store baseUrl for isolate access
   final baseUrl = dotenv.env['URL_DB'] ?? 'http://10.0.2.2:2310/api';
   await Hive.box('settings').put('baseUrl', baseUrl);
 
