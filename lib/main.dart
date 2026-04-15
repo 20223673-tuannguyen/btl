@@ -41,7 +41,7 @@ import 'package:financy_ui/app/services/Local/settings_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // initialize notification
+  // initialize 
   NotiService().initNotification();
   await NotiService().requestNotificationPermission();
 
